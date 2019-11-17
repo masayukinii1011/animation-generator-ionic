@@ -1,9 +1,15 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 
+import { HomePage } from './home/home.page';
+import { ShapeGeneratePage } from './shape-generate/shape-generate.page';
+import { MovingCirclePage } from './moving-circle/moving-circle.page';
+
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  { path: 'home', loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)},
+  { path: '', component: HomePage },
+  { path: 'shape-generate', component: ShapeGeneratePage },
+  { path: 'moving-circle', component: MovingCirclePage },
+  { path: '*', redirectTo: '', pathMatch: 'full' },
 ];
 
 @NgModule({

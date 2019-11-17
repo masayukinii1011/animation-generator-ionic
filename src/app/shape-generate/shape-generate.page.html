@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Shape Generate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div [style.width.px]="size" [style.margin]="margin">
+    <app-canvas [width]="size" [height]="size"></app-canvas>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+          <ion-button class="control" expand="block" color="danger" (click)="toggleScale()">
+            {{nowScale}}
+          </ion-button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-button class="control" expand="block" color="secondary" (click)="toggleMaxLife()">
+            {{nowMaxLife}}
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col col-6>
+          <ion-button class="control" expand="block" color="warning" (click)="toggleGravity()">
+            {{nowGravity}}
+          </ion-button>
+        </ion-col>
+        <ion-col col-6>
+          <ion-button class="control" expand="block" color="success" (click)="setBackground()">
+            Change Background
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
