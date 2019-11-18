@@ -9,7 +9,7 @@ export class CreateJsService {
   public object: createjs.Shape;
   private background: createjs.Shape;
   private bg = ['#ff9a9e', '#fda085', '#96e6a1', '#e2ebf0', '#a18cd1', '#ffecd2', '#84fab0'];
-  public margin = '4px auto';
+  public margin = '8px auto';
   public size: number;
 
   private width = window.innerWidth * 0.94;
